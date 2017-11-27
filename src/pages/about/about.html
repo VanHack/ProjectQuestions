@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar ion-navbar>
+   <button ion-button menuToggle>
+    <ion-icon name="md-contact"></ion-icon>
+   </button>
+   <ion-title>
+      Questions
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding *ngIf="question != 0">
+    <div>
+      <ion-item><strong>{{question.question}}</strong><br>
+      {{question.valorcr}}</ion-item>
+      
+    </div>
+  </ion-content>

@@ -1,0 +1,33 @@
+<ion-header no-border>
+  <ion-navbar ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="md-contact"></ion-icon>
+    </button>
+    <ion-title>
+      QnA Deshboard
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="home">
+  <div *ngFor="let todo of todos">
+    <ion-card (press)="updateTodo(todo)" (click)="openQuestion(todo._id)" class="item">
+      <ion-card-header>
+        {{todo.title}}
+      </ion-card-header>
+      <ion-card-content style="font-family: 'Barlow Semi Condensed', sans-serif;">
+        {{todo.question}}
+      </ion-card-content>
+    </ion-card>
+    <ion-item-options>
+      <button ion-button (click)="deleteTodo(todo)">
+        <ion-icon name="checkmark"></ion-icon>
+      </button>
+    </ion-item-options>
+  </div>
+  <ion-fab bottom right>
+    <button ion-fab mini (click)="openCreatQuestion()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>

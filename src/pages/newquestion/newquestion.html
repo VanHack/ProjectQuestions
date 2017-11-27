@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>New Question</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="input">
+    <ion-item>
+      <ion-label floating>What Title for your Question?</ion-label>
+      <ion-input type="text" [(ngModel)]="todo.title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>What Possible Answers?</ion-label>
+      <ion-input type="text" [(ngModel)]="todo.quest"></ion-input>
+    </ion-item>
+    <button ion-button color="blue" (click)="createquestion(todo)" class="btn">Send New Question</button>
+  </div>
+  <ion-label>
+    Whats Friends Answers your Question?
+  </ion-label>
+  <div>
+    <ion-item>
+      <ion-label>Yago R. Oliveira</ion-label>
+      <ion-checkbox color="dark" checked="true"></ion-checkbox><br>
+    </ion-item>
+      <ion-item>
+      <ion-label>Pedro Marcos</ion-label>
+      <ion-checkbox color="dark" checked="true"></ion-checkbox><br>
+    </ion-item>
+    <ion-item>
+      <ion-label>Rafael Rodrigues</ion-label>
+      <ion-checkbox color="dark" checked="true"></ion-checkbox><br>
+    </ion-item>
+    <ion-item>
+      <ion-label>Vanhack 2017</ion-label>
+      <ion-checkbox color="dark" checked="true"></ion-checkbox>
+    </ion-item>
+  </div>
+</ion-content>

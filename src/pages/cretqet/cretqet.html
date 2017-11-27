@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Questions</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding *ngIf="question != 0">
+  <div>
+    <ion-item><strong>{{question.title}}</strong><br>
+    {{question.question}}</ion-item>
+    
+  </div>
+</ion-content>
